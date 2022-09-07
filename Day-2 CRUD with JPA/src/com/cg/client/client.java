@@ -18,28 +18,33 @@ public class client
 		s.setName("Shraddha");
 		service.addStudent(s);
 		
-/*
+         /*
 		//create operation
 		s.setRollno(109);
 		s.setName("Shreya");
-		service.addStudent(s);*/
+		service.addStudent(s);
+		*/
 		
-		/*retrieve data
+		/*
+	    //retrieve data
 		s=service.getStudentById(108);
 		System.out.println("Student rollno: "+s.getRollno());
 		System.out.println("Student name: "+s.getName());
 		*/
 		
-		/*update
+		/*
+		//update
 		s=service.getStudentById(108);
 		s.setName("Harry");
-		service.updateStudent(s);*/
+		service.updateStudent(s);
+		*/
 		
 		/*
 		//delete
 		s=service.getStudentById(108);
 		service.deleteStudent(s);
-		System.out.println("Data is deleted");*/
+		System.out.println("Data is deleted");
+		*/
 	}
 
 }
