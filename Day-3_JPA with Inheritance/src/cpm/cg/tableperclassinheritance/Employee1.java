@@ -1,0 +1,49 @@
+package cpm.cg.tableperclassinheritance;
+
+
+	import java.io.Serializable;
+	import javax.persistence.Entity;
+	import javax.persistence.GeneratedValue;
+	import javax.persistence.GenerationType;
+	import javax.persistence.Id;
+	import javax.persistence.Inheritance;
+	import javax.persistence.InheritanceType;
+	import javax.persistence.Table;
+
+	@Entity
+	@Table(name="Employee1")
+	@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
+	
+	public class Employee1 implements Serializable
+	{
+		private static final long serialVersionUID = 1L;
+	    
+		@Id
+		//Ot create Id automatically in MySQL
+		@GeneratedValue(strategy=GenerationType.AUTO)
+		private int EmpId;
+		private String name;
+		private float salary;
+		
+		//getters and setters method
+		public int getEmpId() {
+			return EmpId;
+		}
+		public void setEmpId(int empId) {
+			EmpId = empId;
+		}
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		public float getSalary() {
+			return salary;
+		}
+		public void setSalary(float salary) {
+			this.salary = salary;
+		}
+		
+
+}
