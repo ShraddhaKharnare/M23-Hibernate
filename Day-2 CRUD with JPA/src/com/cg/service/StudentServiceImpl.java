@@ -36,12 +36,11 @@ public class StudentServiceImpl implements StudentService
 		dao.commitTransaction();		
 	}
 
-	@SuppressWarnings("unused")
 	@Override
 	public Student getStudentById(int rollno)
 	{
 		Student s=dao.getStudentById(rollno);
-		return null;
+		return s;
 	}
 
 }
