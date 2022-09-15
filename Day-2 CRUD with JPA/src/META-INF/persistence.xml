@@ -11,10 +11,11 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 <property name="javax.persistence.jdbc.driver"
 value="com.mysql.jdbc.Driver" />
  <property name="javax.persistence.jdbc.url"
-value="jdbc:mysql://localhost:3306/TNS" />
+value="jdbc:mysql://localhost:3306/TNS"/>
  <property name="javax.persistence.jdbc.user" value="root" />
  <property name="javax.persistence.jdbc.password"
 value="Root" />
+ 
  
 </properties>
 </persistence-unit>
