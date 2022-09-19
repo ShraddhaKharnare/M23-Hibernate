@@ -6,20 +6,21 @@ import javax.persistence.Persistence;
 
 public class JPA_Util 
 {
-  private static EntityManagerFactory factory;
-  private static EntityManager em;
+	private static EntityManagerFactory factory;
+	private static EntityManager em;
 	
-  static
-  {
-	  factory=Persistence.createEntityManagerFactory("JPA-PU");
-  }
-  public static EntityManager getEntityManager()
-  {
-	  if(em==null || !em.isOpen())
-	  {
-		  em=factory.createEntityManager();
-	  }
-	  return em;
-  }
+	static
+	{
+		factory=Persistence.createEntityManagerFactory("JPA-PU");
+	}
+
+	public static EntityManager getEntityManager()
+	{
+		if(em==null || !em.isOpen())
+		{
+			em=factory.createEntityManager();
+		}
+		return em;
+	}
   
 }

@@ -1,6 +1,6 @@
 package com.cg.joinedinheritance;
 
-import javax.persistence.DiscriminatorValue;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 

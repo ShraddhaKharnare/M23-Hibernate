@@ -1,19 +1,16 @@
 package com.cg.client;
 
-import java.time.LocalDate;
 
-import com.cg.entites.Admin;
 import com.cg.entites.Certificate;
 import com.cg.entites.College;
 import com.cg.entites.Placement;
 import com.cg.entites.Student;
 import com.cg.entites.User;
-import com.cg.service.AdminService;
-import com.cg.service.AdminServiceImpl;
 import com.cg.service.PlacementService;
 import com.cg.service.PlacementServiceImpl;
 import com.cg.service.StudentService;
 import com.cg.service.StudentServiceImpl;
+
 
 public class client 
 {
@@ -36,7 +33,12 @@ public class client
 		
 		//OneToOne bidirectional
 		s.setCertificate(c);
-		//c.setStudent(s);
+		c.setId(0);
+		
+		//addding a data
+		//service.addstudent(student)
+		       
+		      
 
 		//College input 
 		College C=new College();
@@ -44,17 +46,17 @@ public class client
 		C.setCollegeName("Vogce");
 		C.setLocation("Aghai");
 		
+		
+		
 		//Placement input
 		Placement p=new Placement();
-		PlacementService placement =new PlacementServiceImpl();
+		PlacementService serivice1 =new PlacementServiceImpl();
 		p.setId(1515);
 		p.setName("TNS Foundation");
 		p.setQualification("BE");
 		p.setYear(2022);
 		p.setCollege(C);
-		LocalDate date=LocalDate.now();
-		p.setDate(date);
-		placement.addPlacement(p);
+		serivice1.addPlacement(p);
 		
 		//for placement table
 		System.out.println("Placement Id is: "+p.getId());
@@ -66,22 +68,24 @@ public class client
 		
 		//For User
 		User u=new User();
+		
 		u.setId(1010);
 		u.setName("Sara");
 		u.setPassword("14525");
 		u.setType("new User");
 		
-		//Admin input 
+		
+		/*Admin input 
 		Admin a=new Admin();
 		AdminService ad=new AdminServiceImpl();
 		a.setId(4585);
 		a.setName("Purva");
 		a.setPassword("45345");
-				
+			*/	
 	
 				
 		//Adding data
-		ad.addNewAdmin(a);
+		//ad.addNewAdmin(a);
 		
 		//for User table
 	    System.out.println("User ID is : " +u.getId());
@@ -89,16 +93,17 @@ public class client
 		System.out.println("User Type is : "+u.getType());
 		System.out.println("User Password is : "+u.getPassword());
 		
-		
+		/*
 		//Displaying output for admin table
 		System.out.println("Admin ID is : " +a.getId());
 		System.out.println("Admin Name is: "+a.getName());
 		System.out.println("Admin Password is : "+a.getPassword());
+		*/
+		
 		
 		//adding data
 		service.addStudent(s);
 		service.searchStudentById(11);
-		
 		
 		
 		

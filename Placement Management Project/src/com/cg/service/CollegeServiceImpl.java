@@ -30,14 +30,14 @@ public CollegeDao dao;
 	}
 
 	@Override
-	public boolean deleteCollege(long id) {
-		boolean college=dao.deleteCollege(id);
+	public boolean deleteCollege(long college_id) {
+		boolean college=dao.deleteCollege(college_id);
 		return college;
 	}
 
 	@Override
-	public College searchCollege(long id) {
-		College college=dao.searchCollege(id);	
+	public College searchCollege(long college_id) {
+		College college=dao.searchCollege(college_id);	
 		return college;
 		
 	}

@@ -2,9 +2,7 @@ package com.cg.joinedinheritance;
 
 import java.io.Serializable;
 
-import javax.persistence.DiscriminatorColumn;
-import javax.persistence.DiscriminatorType;
-import javax.persistence.DiscriminatorValue;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,7 +20,7 @@ public class Employee implements Serializable
 	private static final long serialVersionUID = 1L;
     
 	@Id
-	//Ot create Id automatically in MySQL
+	//it create Id automatically in MySQL
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int EmpId;
 	private String name;

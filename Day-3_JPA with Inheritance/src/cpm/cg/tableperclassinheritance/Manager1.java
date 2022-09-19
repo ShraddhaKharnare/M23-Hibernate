@@ -3,9 +3,11 @@ package cpm.cg.tableperclassinheritance;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import com.cg.joinedinheritance.Employee;
+
 @Entity
 @Table(name="Manager1")
-public class Manager1 
+public class Manager1 extends Employee
 {
 	private static final long serialVersionUID = 1L;
 	private String deptname;

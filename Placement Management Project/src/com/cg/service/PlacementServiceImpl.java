@@ -30,15 +30,15 @@ public PlacementServiceImpl() {
 	}
 
 	@Override
-	public Placement searchPlacement(long id) {
-		Placement placement=dao.searchPlacement(id);
+	public Placement searchPlacement(long placement_id) {
+		Placement placement=dao.searchPlacement(placement_id);
 		return placement;
 	}
 
 	@Override
-	public boolean cancelPlacement(long id) {
+	public boolean cancelPlacement(long placement_id) {
 		dao.beginTransaction();
-		boolean res=dao.cancelPlacement(id);
+		boolean res=dao.cancelPlacement(placement_id);
 		dao.commitTransaction();
 		return res;
 	}

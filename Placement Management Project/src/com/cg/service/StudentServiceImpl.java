@@ -13,6 +13,11 @@ public class StudentServiceImpl implements StudentService
 		dao=new StudentDaoImpl();
 	}
 
+	public StudentServiceImpl(StudentDao dao) {
+		super();
+		this.dao = dao;
+	}
+
 	@Override
 	public Student addStudent(Student student) {
 		dao.beginTransaction();

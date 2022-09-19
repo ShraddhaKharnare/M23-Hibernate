@@ -6,6 +6,6 @@ public interface PlacementService
 {
 	Placement addPlacement(Placement placement);
 	Placement updatePlacement(Placement placement);
-	Placement searchPlacement(long id);
-	boolean   cancelPlacement(long id);
+	Placement searchPlacement(long placement_id);
+	boolean   cancelPlacement(long placement_id);
 }

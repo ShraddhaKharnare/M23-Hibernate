@@ -34,7 +34,7 @@ public class Client1
 			 m.setDeptname("Information Technology");
 			 em.persist(m);
 			 
-			 em.getTransaction().begin();
+			 em.getTransaction().commit();
 			 System.out.println("Data is Inserted");
 			 em.close();
 			 factory.close();

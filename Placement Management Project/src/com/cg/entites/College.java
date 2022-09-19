@@ -1,9 +1,9 @@
 package com.cg.entites;
 
-import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -11,12 +11,14 @@ import javax.persistence.Table;
 public class College 
 {
 	@Id
+	@Column(name="college_id")
 	private int college_id;
-	private User collegeAdmin ;
 	private String CollegeName ;
 	private String location ;
 	
-	@OneToOne(cascade=CascadeType.ALL)
+	@OneToMany(mappedBy="User")
+	private User collegeAdmin ;
+
 	
 	// getter and setter method
 	public int getCollege_id() {
@@ -43,5 +45,8 @@ public class College
 	public void setLocation(String location) {
 		this.location = location;
 	}		
-	
+	@Override
+	public String toString() {
+		return "College [CollegeName=" + CollegeName + "]";
+	}
 }

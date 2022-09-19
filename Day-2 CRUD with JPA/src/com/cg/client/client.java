@@ -13,17 +13,18 @@ public class client
         
 		Student s=new Student();
 		
+		/*
 		//create operation
 		s.setRollno(108);
 		s.setName("Shraddha");
 		service.addStudent(s);
-		
-         /*
+		*/
+         
 		//create operation
 		s.setRollno(109);
 		s.setName("Shreya");
 		service.addStudent(s);
-		*/
+		
 		
 		/*
 	    //retrieve data

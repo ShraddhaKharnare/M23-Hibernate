@@ -34,8 +34,8 @@ private EntityManager em;
 
 	@Override
 	public Certificate searchCertificate(int cert_id) {
-		
-		return null;
+		Certificate certificate=em.find(Certificate.class, cert_id);
+		return certificate;
 	}
 
 

@@ -2,9 +2,11 @@ package com.cg.entites;
 
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -13,7 +15,7 @@ import javax.persistence.Table;
 public class Student 
 {
     @Id	
-    
+    @Column
 	private int id;   
 	private int rollno;
 	private String qualification;
@@ -25,6 +27,11 @@ public class Student
 	@JoinColumn(name="Cert_Id")	
 	private Certificate certificate;
 
+	@ManyToOne(cascade=CascadeType.ALL)
+	private College college;
+	
+	
+	
 	//getters and setters method
 	public int getId() {
 		return id;

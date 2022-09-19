@@ -2,7 +2,8 @@ package com.cg.dao;
 
 import com.cg.entites.Certificate;
 
-public interface CertificateDao{
+public interface CertificateDao
+{
   Certificate addCertificate(Certificate certificate);
   Certificate updateCertificate(Certificate certificate);
   Certificate searchCertificate(int cert_id);

@@ -1,28 +1,35 @@
 package com.cg.entites;
 
-import java.io.Serializable;
-
-import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
-public class User implements Serializable 
+@Entity
+@Table(name="User")
+public class User
 {
-	private static final long serialVersionUID=1L;
+	
 	@Id
-	private int id;
+	@Column(name="user_id")
+	private int user_id;
 	private String name;
 	private String type;
 	private String password;
 	
-	@OneToOne(cascade=CascadeType.ALL)
+	@OneToOne(mappedBy="user") //Using OneToOne Mapping
+	private Admin admin;
+	
+	@OneToOne(mappedBy="user")  //Using OneToOne Mapping
+	private College college;
 	
 	//getters and setters method
 	public int getId() {
-		return id;
+		return user_id;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setId(int user_id) {
+		this.user_id = user_id;
 	}
 	public String getName() {
 		return name;
@@ -42,9 +49,7 @@ public class User implements Serializable
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+	
 	
 
 	
